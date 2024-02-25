@@ -5,6 +5,10 @@ spring:
     name: APIGATEWAY
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: USER-SERVICE
           uri: lb://USER-SERVICE
